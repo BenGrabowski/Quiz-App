@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#start-screen-image {
+  width: 50%;
+}
+
+.welcome-message {
+  border: 1px solid black;
+  padding: 20px; 
+}
+
+#start-button {
+  width: 150px;
+  height: 50px;
+  margin-top: 30px;
+}

@@ -4,50 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Ben Grabowski's Golf Quiz">
-    <title>Ben's Golf Quiz</title>
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <title>Golf Quiz</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   
-  <body>
-    <header>
-      <div class="header-content">
-      <h1>Ben's Golf Quiz</h1>
-      <section class="quiz-stats">
-        <p>Question #</p>
-        <p>Score:</p>
+  <body> 
+    <div class="container">
+      <header>
+        <h1 class="quiz-title start">Golf Quiz</h1>
+      </header>
+  
+      <img src="images/start-screen-image.jpg" alt="golf ball icon" id="start-screen-image">
+  
+      <section class="welcome-message">
+        <h2 class="welcome-message start">Welcome Screen Message</h2>
       </section>
-      </div>
-    </header>
+  
+      <button id="start-button" class="start">Tee Off</button>
 
-  <main>
+      <div class="question-form"></div>
 
-    <section class="question-box">
-      <div id="question-image">
-        <p>Placeholder for image</p>
-      </div>
-      <p id="question">This is where the question will be displayed.</p>
-      <p id="feedback">This is where the answer feedback will be displayed.</p>
-    </section>
-
-    <section>
-    <form id="quiz-answers">
-      <input type="button" class="answer"></input>
-      <input type="button" class="answer"></input>
-      <input type="button" class="answer"></input>
-      <input type="button" class="answer"></input>
-      <div class="form-controls">
-        <input type="submit" class="form-buttons">
-        <button type="button" id="next-page" class="form-buttons">Next</button>
-      </div>
-    </form>
-    </section>
-  </main>
-
-
-    <script
-    src="https://code.jquery.com/jquery-3.4.0.js"
-    integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-    crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    </div>
+  
+      <script
+      src="https://code.jquery.com/jquery-3.4.0.js"
+      integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+      crossorigin="anonymous"></script>
+      <script src="script.js"></script>
   </body>
 </html>

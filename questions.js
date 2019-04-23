@@ -5,7 +5,8 @@ const STORE = [
       answer2: '14',
       answer3: '12',
       answer4: '15',
-      correctAnswer: '14'
+      correctAnswer: '14',
+      image: 'images/golf-clubs.jpg'
     },
 
     {
@@ -14,7 +15,8 @@ const STORE = [
         answer2: 'Jack Nicklaus',
         answer3: 'Arnold Palmer',
         answer4: 'Phil Mickelson',
-        correctAnswer: 'Jack Nicklaus'
+        correctAnswer: 'Jack Nicklaus',
+        image: 'images/jack-nicklaus.jpg'
       },
 
       {
@@ -23,7 +25,8 @@ const STORE = [
         answer2: 'Birdie',
         answer3: 'Double-Birdie',
         answer4: 'Eagle',
-        correctAnswer: 'Eagle'
+        correctAnswer: 'Eagle',
+        image: 'images/golfer.png'
       },
 
       {
@@ -32,7 +35,8 @@ const STORE = [
         answer2: '54',
         answer3: '18',
         answer4: '72',
-        correctAnswer: '72'
+        correctAnswer: '72',
+        image: 'images/golf-ball-near-hole.jpg'
       },
 
       {
@@ -41,7 +45,8 @@ const STORE = [
         answer2: '1.68"',
         answer3: '1.52"',
         answer4: '1.73"',
-        correctAnswer: '1.68'
+        correctAnswer: '1.68',
+        image: 'images/golf-ball.jpg'
       },
 
       {
@@ -50,7 +55,8 @@ const STORE = [
         answer2: 'The Masters',
         answer3: 'The Players Championship',
         answer4: 'The U.S. Open',
-        correctAnswer: 'The Players Championship'
+        correctAnswer: 'The Players Championship',
+        image: 'images/the-players.jpg'
       },
 
       {
@@ -59,7 +65,8 @@ const STORE = [
         answer2: 'England',
         answer3: 'Scotland',
         answer4: 'The United States',
-        correctAnswer: 'Scotland'
+        correctAnswer: 'Scotland',
+        image: 'images/St-Andrews.jpg'
       },
 
       {
@@ -68,7 +75,8 @@ const STORE = [
         answer2: 'Draw',
         answer3: 'Slice',
         answer4: 'Blade',
-        correctAnswer: 'Slice'
+        correctAnswer: 'Slice',
+        image: 'images/golf-slice.jpg'
       },
 
       {
@@ -77,7 +85,8 @@ const STORE = [
         answer2: 'Sand Wedge',
         answer3: '8 iron',
         answer4: 'Fairway Wood',
-        correctAnswer: 'Sand Wedge'
+        correctAnswer: 'Sand Wedge',
+        image: 'images/sand-wedge.jpg'
       },
 
       {
@@ -86,6 +95,7 @@ const STORE = [
         answer2: 'Tampa, FL',
         answer3: 'Hartford, CT',
         answer4: 'Augusta, GA',
-        correctAnswer: 'Augusta, GA'
+        correctAnswer: 'Augusta, GA',
+        image: 'images/the-masters.jpg'
       },
 ]
