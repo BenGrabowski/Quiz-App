@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Ben Grabowski's Golf Quiz">
-    <title>Golf Quiz</title>
+    <meta name="description" content="See if your golf knowledge is up to par">
+    <title>Grabowski's Golf Quiz</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   
@@ -12,17 +12,19 @@
     <div class="container">
       <header>
         <h1 class="quiz-title start">Golf Quiz</h1>
+        <div class="quiz-info"></div>
       </header>
   
-      <img src="images/start-screen-image.jpg" alt="golf ball icon" id="start-screen-image">
+      <img src="images/start-screen-image.jpg" alt="golf ball icon" id="start-screen-image" class="start">
   
-      <section class="welcome-message">
-        <h2 class="welcome-message start">Welcome Screen Message</h2>
+      <section class="start">
+        <h2 class="welcome-message">Welcome Screen Message</h2>
       </section>
   
-      <button id="start-button" class="start">Tee Off</button>
+      <button class="start">Tee Off</button>
 
-      <div class="question-form"></div>
+      <div class="question"></div>
+      <div class="feedback"></div>
 
     </div>
   
@@ -31,5 +33,6 @@
       integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
       crossorigin="anonymous"></script>
       <script src="script.js"></script>
+      <script src="questions.js"></script>
   </body>
 </html>
