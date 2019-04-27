@@ -26,7 +26,7 @@ const STORE = [
         answer3: 'Double-Birdie',
         answer4: 'Eagle',
         correctAnswer: 'Eagle',
-        image: 'images/golfer.png'
+        image: 'images/bald-eagle.jpg'
       },
 
       {
