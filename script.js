@@ -67,45 +67,53 @@ function checkAnswer(event) {
     let checkedAnswer = $('input:checked');
     let userAnswer = checkedAnswer.val();
     // if else statement checking the answer text vs. the correctAnswer property
-    if(userAnswer === STORE[questionNumber - 1].correctAnswer) {
+    if(userAnswer === STORE[questionNumber].correctAnswer) {
         generateCorrectFeedback();
     } else {
         generateIncorrectFeedback();
     }
     console.log('checkAnswer ran');
     console.log(userAnswer);
-    console.log(STORE[questionNumber - 1].correctAnswer);
+    console.log(STORE[questionNumber].correctAnswer);
 }
 
 function generateCorrectFeedback() {
     let feedback = `<div class="correct-feedback">
-    <img src="${STORE[questionNumber - 1].image}" class="question-image">    
+    <img src="${STORE[questionNumber].image}" class="question-image">    
     <p>Correct Feedback Message Goes Here</p>
     <button class="next-button">Next</button>
     </div>`;
     displayFeedback(feedback);
     userScore++;
+    renderQuizInfo();
+    console.log('generateCorrectFeedback ran');
 }
 
 function generateIncorrectFeedback() {
     let feedback = `<div class="incorrect-feedback">
-    <img src="${STORE[questionNumber - 1].image} class="question-image">    
+    <img src="${STORE[questionNumber].image}" class="question-image">    
     <p>Incorrect Feedback Message Goes Here</p>
     <button class="next-button">Next</button>
     </div>`;
     displayFeedback(feedback);
+    console.log('generateIncorrectFeedback ran');
 }
 
 function displayFeedback(feedbackDiv) {
     $('.question-content').remove();
     $('.feedback').html(feedbackDiv);
+    renderQuizInfo();
+    $('.feedback').show();
+    console.log('displayFeedback ran');
 }
 
 function handleNextButton() {
  $('.feedback').on('click', '.next-button', function(event) {
     $('.feedback').hide();
     questionNumber++;
-    renderQuestion(STORE[questionNumber - 1]);
+    renderQuestion(STORE[questionNumber]);
+    renderQuizInfo();
+    console.log('handleNextButton ran');
  });     
 }
 
