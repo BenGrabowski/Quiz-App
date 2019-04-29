@@ -1,7 +1,6 @@
 'use-strict';
 
-let questionNumber = 0;
-let userScore = 0;
+let questionNumber = 0, userScore = 0;
 
 function handleStartButton() {
     $('button.start').on('click', function(event) {
@@ -15,36 +14,36 @@ function handleStartButton() {
 
 function renderQuestion(questionObject) {
     if(questionNumber < STORE.length) {
-    let quizQuestion = `<div class="question-content">
-    <img src="${questionObject.image}" class="blurred question-image">
-    <h2>${questionObject.question}</h2>
-    <form>
-    <fieldset>
-    <label>
-    <input name="answer" type="radio" value="${questionObject.answer1}"><span class="question-text">
-    ${questionObject.answer1}</span></input>
-    </label>
+        let quizQuestion = `<div class="question-content">
+        <img src="${questionObject.image}" class="blurred question-image">
+        <h2>${questionObject.question}</h2>
+        <form>
+        <fieldset>
+        <label>
+        <input name="answer" type="radio" value="${questionObject.answer1}"><span class="question-text">
+        ${questionObject.answer1}</span></input>
+        </label>
 
-    <label>
-    <input name="answer" type="radio" value="${questionObject.answer2}"><span class="question-text">
-    ${questionObject.answer2}</span></input>
-    </label>
+        <label>
+        <input name="answer" type="radio" value="${questionObject.answer2}"><span class="question-text">
+        ${questionObject.answer2}</span></input>
+        </label>
 
-    <label>
-    <input name="answer" type="radio" value="${questionObject.answer3}"><span class="question-text">
-    ${questionObject.answer3}</span></input>
-    </label>
+        <label>
+        <input name="answer" type="radio" value="${questionObject.answer3}"><span class="question-text">
+        ${questionObject.answer3}</span></input>
+        </label>
 
-    <label>
-    <input name="answer" type="radio" value="${questionObject.answer4}"><span class="question-text">
-    ${questionObject.answer4}</span></input>
-    </label>
-    <button type="submit" class="submit-button">Submit</button>
-    </fieldset>
-    </form>
-    </div>`;
+        <label>
+        <input name="answer" type="radio" value="${questionObject.answer4}"><span class="question-text">
+        ${questionObject.answer4}</span></input>
+        </label>
+        <button type="submit" class="submit-button">Submit</button>
+        </fieldset>
+        </form>
+        </div>`;
 
-    $('.question').html(quizQuestion);
+        $('.question').html(quizQuestion);
     } else {
         displayResults();
     }
@@ -80,7 +79,7 @@ function checkAnswer(event) {
 function generateCorrectFeedback() {
     let feedback = `<div class="correct-feedback">
     <img src="${STORE[questionNumber].image}" class="question-image">    
-    <p>Correct Feedback Message Goes Here</p>
+    <p>That's Correct!</p>
     <button class="next-button">Next</button>
     </div>`;
     displayFeedback(feedback);
@@ -92,7 +91,7 @@ function generateCorrectFeedback() {
 function generateIncorrectFeedback() {
     let feedback = `<div class="incorrect-feedback">
     <img src="${STORE[questionNumber].image}" class="question-image">    
-    <p>Incorrect Feedback Message Goes Here</p>
+    <p>Nope! The correct answer is "${STORE[questionNumber].correctAnswer}".</p>
     <button class="next-button">Next</button>
     </div>`;
     displayFeedback(feedback);
@@ -109,17 +108,40 @@ function displayFeedback(feedbackDiv) {
 
 function handleNextButton() {
  $('.feedback').on('click', '.next-button', function(event) {
-    $('.feedback').hide();
-    questionNumber++;
-    renderQuestion(STORE[questionNumber]);
-    renderQuizInfo();
-    console.log('handleNextButton ran');
+    if (questionNumber < 10) {
+        $('.feedback').hide();
+        questionNumber++;
+        renderQuestion(STORE[questionNumber]);
+        renderQuizInfo();
+        console.log('handleNextButton ran');
+    } else {
+        displayResults();
+    }
  });     
 }
 
-// function displayResults() {
-//     if(userScore > )
-// }
+function displayResults() {
+    
+    if (userScore > 7) {
+        let userResults = `<div class="quiz-results">
+            <img class="question-image" src="images/top-tier.jpg">    
+            <p>Results for users who score an 8 or higher</p>
+            </div>`;
+        $('.results').html(userResults);
+    } else if (userScore > 4) {
+        let userResults = `<div class="quiz-results">
+            <img class="question-image" src="images/middle-tier.jpg">    
+            <p>Results for users who score a 5 or higher</p>
+            </div>`;
+        $('.results').html(userResults);
+    } else {
+        let userResults = `<div class="quiz-results">
+            <img class="question-image" src="images/bottom-tier.jpg">    
+            <p>Results for users who score a 4 or lower</p>
+            </div>`;
+        $('.results').html(userResults);
+    }
+}
 
 function runQuizApp() {
     handleStartButton();

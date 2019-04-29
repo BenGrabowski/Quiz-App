@@ -46,7 +46,7 @@ const STORE = [
         answer3: '1.52"',
         answer4: '1.73"',
         correctAnswer: '1.68',
-        image: 'images/golf-ball.jpg'
+        image: 'images/golf-ball.png'
       },
 
       {
