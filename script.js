@@ -7,6 +7,7 @@ function handleStartButton() {
         $('.start').hide();
         renderQuestion(STORE[questionNumber]);
         renderQuizInfo();
+        $('.quiz-info').show();
     });
     console.log('handle start working')
     console.log(questionNumber);
@@ -50,8 +51,10 @@ function renderQuestion(questionObject) {
 }
 
 function renderQuizInfo() {
-    let quizInfo = `<p>Question: ${questionNumber + 1}/10</p>
-    <p>Score: ${userScore}</p>`;
+    let quizInfo = `<div class="info-container">
+    <p class="question-info-num">Question: ${questionNumber + 1}/10</p>
+    <p class="question-info-score">Score: ${userScore}</p>
+    </div>`;
     $('.quiz-info').html(quizInfo);
 }
 
@@ -121,32 +124,48 @@ function handleNextButton() {
 }
 
 function displayResults() {
-    
+    $('.quiz-info').hide();
     if (userScore > 7) {
         let userResults = `<div class="quiz-results">
-            <img class="question-image" src="images/top-tier.jpg">    
+            <img class="question-image" src="images/top-tier.jpg">
+            <h2>You got ${userScore} correct</h2>    
             <p>Results for users who score an 8 or higher</p>
+            <button class="restart">Restart</button>
             </div>`;
         $('.results').html(userResults);
     } else if (userScore > 4) {
         let userResults = `<div class="quiz-results">
-            <img class="question-image" src="images/middle-tier.jpg">    
+            <img class="question-image" src="images/middle-tier.jpg">
+            <h2>You got ${userScore} correct</h2>    
             <p>Results for users who score a 5 or higher</p>
+            <button class="restart">Restart</button>
             </div>`;
         $('.results').html(userResults);
     } else {
         let userResults = `<div class="quiz-results">
-            <img class="question-image" src="images/bottom-tier.jpg">    
+            <img class="question-image" src="images/bottom-tier.jpg">
+            <h2>You got ${userScore} correct</h2>    
             <p>Results for users who score a 4 or lower</p>
+            <button class="restart">Restart</button>
             </div>`;
         $('.results').html(userResults);
     }
+}
+
+function handleRestartButton() {
+    $('.results').on('click', '.restart', function(event) {
+        $('.start').show();
+        $('.quiz-results').hide();
+        userScore = 0;
+        questionNumber = 0;
+    })
 }
 
 function runQuizApp() {
     handleStartButton();
     handleSubmit();
     handleNextButton();
+    handleRestartButton();
 }
 
 $(runQuizApp);
