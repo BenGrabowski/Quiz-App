@@ -6,7 +6,8 @@ const STORE = [
       answer3: '12',
       answer4: '15',
       correctAnswer: '14',
-      image: 'images/golf-clubs.jpg'
+      image: 'images/golf-clubs.jpg',
+      alt: 'golf clubs in bag'
     },
 
     {
@@ -16,7 +17,8 @@ const STORE = [
         answer3: 'Arnold Palmer',
         answer4: 'Phil Mickelson',
         correctAnswer: 'Jack Nicklaus',
-        image: 'images/jack-nicklaus.jpg'
+        image: 'images/jack-nicklaus.jpg',
+        alt: 'Jack Nicklaus'
       },
 
       {
@@ -26,7 +28,8 @@ const STORE = [
         answer3: 'Double-Birdie',
         answer4: 'Eagle',
         correctAnswer: 'Eagle',
-        image: 'images/bald-eagle.jpg'
+        image: 'images/bald-eagle.jpg',
+        alt: 'bald eagle'
       },
 
       {
@@ -36,7 +39,8 @@ const STORE = [
         answer3: '18',
         answer4: '72',
         correctAnswer: '72',
-        image: 'images/golf-ball-near-hole.jpg'
+        image: 'images/golf-ball-near-hole.jpg',
+        alt: 'golf ball near hole'
       },
 
       {
@@ -46,7 +50,8 @@ const STORE = [
         answer3: '1.52"',
         answer4: '1.73"',
         correctAnswer: '1.68',
-        image: 'images/golf-ball.png'
+        image: 'images/golf-ball.png',
+        alt: 'golf ball'
       },
 
       {
@@ -56,7 +61,8 @@ const STORE = [
         answer3: 'The Players Championship',
         answer4: 'The U.S. Open',
         correctAnswer: 'The Players Championship',
-        image: 'images/the-players.jpg'
+        image: 'images/the-players.jpg',
+        alt: 'The Player\'s Championship trophy'
       },
 
       {
@@ -66,7 +72,8 @@ const STORE = [
         answer3: 'Scotland',
         answer4: 'The United States',
         correctAnswer: 'Scotland',
-        image: 'images/St-Andrews.jpg'
+        image: 'images/St-Andrews.jpg',
+        alt: 'Clubhouse at St. Andrews Golf Club'
       },
 
       {
@@ -76,7 +83,8 @@ const STORE = [
         answer3: 'Slice',
         answer4: 'Blade',
         correctAnswer: 'Slice',
-        image: 'images/golf-slice.jpg'
+        image: 'images/golf-slice.jpg',
+        alt: 'Golfer hitting a right curivng shot'
       },
 
       {
@@ -86,7 +94,8 @@ const STORE = [
         answer3: '8 iron',
         answer4: 'Fairway Wood',
         correctAnswer: 'Sand Wedge',
-        image: 'images/sand-wedge.jpg'
+        image: 'images/sand-wedge.jpg',
+        alt: 'Golf club and ball in sand trap'
       },
 
       {
@@ -96,6 +105,7 @@ const STORE = [
         answer3: 'Hartford, CT',
         answer4: 'Augusta, GA',
         correctAnswer: 'Augusta, GA',
-        image: 'images/the-masters.jpg'
+        image: 'images/the-masters.jpg',
+        alt: '12th Green at The Masters'
       },
 ]

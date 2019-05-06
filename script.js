@@ -16,7 +16,7 @@ function handleStartButton() {
 function renderQuestion(questionObject) {
     if(questionNumber < STORE.length) {
         let quizQuestion = `<div class="question-content">
-        <img src="${questionObject.image}" class="blurred question-image">
+        <img src="${questionObject.image}" alt="blurred out image" class="blurred question-image">
         <h2>${questionObject.question}</h2>
         <form>
         <fieldset>
@@ -81,7 +81,7 @@ function checkAnswer(event) {
 
 function generateCorrectFeedback() {
     let feedback = `<div class="correct-feedback">
-    <img src="${STORE[questionNumber].image}" class="question-image">    
+    <img src="${STORE[questionNumber].image}" alt="${STORE[questionNumber].alt}" class="question-image">    
     <p>That's Correct!</p>
     <button class="next-button">Next</button>
     </div>`;
@@ -93,7 +93,7 @@ function generateCorrectFeedback() {
 
 function generateIncorrectFeedback() {
     let feedback = `<div class="incorrect-feedback">
-    <img src="${STORE[questionNumber].image}" class="question-image">    
+    <img src="${STORE[questionNumber].image}" alt="${STORE[questionNumber].alt}" class="question-image">    
     <p>Nope! The correct answer is "${STORE[questionNumber].correctAnswer}".</p>
     <button class="next-button">Next</button>
     </div>`;
@@ -129,7 +129,7 @@ function displayResults() {
         let userResults = `<div class="quiz-results">
             <img class="question-image" src="images/top-tier.jpg">
             <h2>You got ${userScore} correct</h2>    
-            <p>Results for users who score an 8 or higher</p>
+            <p>Congrats! You played a great round!</p>
             <button class="restart">Restart</button>
             </div>`;
         $('.results').html(userResults);
@@ -137,7 +137,7 @@ function displayResults() {
         let userResults = `<div class="quiz-results">
             <img class="question-image" src="images/middle-tier.jpg">
             <h2>You got ${userScore} correct</h2>    
-            <p>Results for users who score a 5 or higher</p>
+            <p>Not too shabby.</p>
             <button class="restart">Restart</button>
             </div>`;
         $('.results').html(userResults);
@@ -145,7 +145,7 @@ function displayResults() {
         let userResults = `<div class="quiz-results">
             <img class="question-image" src="images/bottom-tier.jpg">
             <h2>You got ${userScore} correct</h2>    
-            <p>Results for users who score a 4 or lower</p>
+            <p>Yikes! Better luck next time.</p>
             <button class="restart">Restart</button>
             </div>`;
         $('.results').html(userResults);
