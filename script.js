@@ -127,7 +127,7 @@ function displayResults() {
     $('.quiz-info').hide();
     if (userScore > 7) {
         let userResults = `<div class="quiz-results">
-            <img class="question-image" src="images/top-tier.jpg">
+            <img class="question-image" src="images/top-tier.jpg" alt="Tiger Woods">
             <h2>You got ${userScore} correct</h2>    
             <p>Congrats! You played a great round!</p>
             <button class="restart">Restart</button>
@@ -135,7 +135,7 @@ function displayResults() {
         $('.results').html(userResults);
     } else if (userScore > 4) {
         let userResults = `<div class="quiz-results">
-            <img class="question-image" src="images/middle-tier.jpg">
+            <img class="question-image" src="images/middle-tier.jpg" alt="Lucas Bjerregaard">
             <h2>You got ${userScore} correct</h2>    
             <p>Not too shabby.</p>
             <button class="restart">Restart</button>
@@ -143,7 +143,7 @@ function displayResults() {
         $('.results').html(userResults);
     } else {
         let userResults = `<div class="quiz-results">
-            <img class="question-image" src="images/bottom-tier.jpg">
+            <img class="question-image" src="images/bottom-tier.jpg" alt="Sad Golfer">
             <h2>You got ${userScore} correct</h2>    
             <p>Yikes! Better luck next time.</p>
             <button class="restart">Restart</button>
