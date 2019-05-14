@@ -21,22 +21,22 @@ function renderQuestion(questionObject) {
         <form>
         <fieldset>
         <label>
-        <input name="answer" type="radio" value="${questionObject.answer1}"><span class="question-text">
+        <input name="answer" type="radio" value="${questionObject.answer1}" required="required"><span class="question-text">
         ${questionObject.answer1}</span></input>
         </label>
 
         <label>
-        <input name="answer" type="radio" value="${questionObject.answer2}"><span class="question-text">
+        <input name="answer" type="radio" value="${questionObject.answer2}" required="required"><span class="question-text">
         ${questionObject.answer2}</span></input>
         </label>
 
         <label>
-        <input name="answer" type="radio" value="${questionObject.answer3}"><span class="question-text">
+        <input name="answer" type="radio" value="${questionObject.answer3}" required="required"><span class="question-text">
         ${questionObject.answer3}</span></input>
         </label>
 
         <label>
-        <input name="answer" type="radio" value="${questionObject.answer4}"><span class="question-text">
+        <input name="answer" type="radio" value="${questionObject.answer4}" required="required"><span class="question-text">
         ${questionObject.answer4}</span></input>
         </label>
         <button type="submit" class="submit-button">Submit</button>
@@ -60,8 +60,12 @@ function renderQuizInfo() {
 
 function handleSubmit() {
     $('.question').on('click', '.submit-button', function(event) {
+        if ($('input[name="answer"]:checked').length == 0) {
+            alert('Please select an answer');
+        } else {
         event.preventDefault;
         checkAnswer(event);
+        }
     });
 }
 
